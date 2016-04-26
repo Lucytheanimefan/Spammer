@@ -13,18 +13,23 @@ var e;
 // Function to get popups of any urls
 function popitup(url, callback) {
 	window.open(url, 'name', 'height=Math.random()*500+150, width=Math.random()*500+150, screenX=Math.random()*screen.width, screenY=Math.random()*screen.height');
-	setTimeout(10000);
 	//if (window.focus) {anewwindow.focus()}
 	//return false;
 }
-while (true) {
+
+/**
 	setTimeout(function() {
 		var i = Math.floor(0 + Math.random() * urls.length);
 		console.log(urls[i]);
 		popitup(urls[i]);
 	}, 5000);
-}
+	**/
 
+function getPopUp(){
+	var i = Math.floor(0 + Math.random() * urls.length);
+		console.log(urls[i]);
+		popitup(urls[i]);
+}
 
 /**
 while (true) {
