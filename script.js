@@ -15,12 +15,13 @@ function popitup(url) {
 	//return false;
 }
 
+var click=false;
 
 function horror(){
 	for (var i=0; i<urls.length; i++){
 		popitup(urls[i]);
 		console.log(urls[i]);
-		if (saveMe()){
+		if (click){
 			break;
 		}
 		if (i==urls.length-1){
@@ -30,8 +31,8 @@ function horror(){
 }
 
 horror(); 
-
 function saveMe(){
 	console.log("button clicked");
-	return true;
+	click=true;
+	return click;
 }
