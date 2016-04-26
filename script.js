@@ -15,24 +15,24 @@ function popitup(url) {
 	//return false;
 }
 
-var click=false;
-
 function horror(){
 	for (var i=0; i<urls.length; i++){
 		popitup(urls[i]);
 		console.log(urls[i]);
-		if (click){
-			break;
-		}
+		//if (click){
+		//	break;
+		//}
+		window.setTimeout(1000);
 		if (i==urls.length-1){
 			horror();
 		}
 	}
 }
-
-horror(); 
+while(saveMe() == false){
+	horror(); 
+	
+}
 function saveMe(){
 	console.log("button clicked");
-	click=true;
-	return click;
+	return true;
 }
