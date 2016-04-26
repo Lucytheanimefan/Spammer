@@ -10,12 +10,15 @@ var urls=['http://www.clickhole.com/',
 
 // Function to get popups of any urls
 function popitup(url) {
-	var anewwindow=window.open(url,'name','height=200,width=Math.random(150,300)');
+	var anewwindow=window.open(url,'name','height=Math.random(150,300),width=Math.random(150,300)');
 	if (window.focus) {anewwindow.focus()}
 	//return false;
 }
 
-//popitup(urls[3]);
+popitup(urls[0]);
+popitup(urls[1]);
+popitup(urls[2]);
+popitup(urls[3]);
 
 function horror(){
 	for (var i=0; i<urls.length; i++){
@@ -30,7 +33,7 @@ function horror(){
 		}
 	}
 }
-horror();
+//horror();
 /**
 while(saveMe() == false){
 	horror(); 
