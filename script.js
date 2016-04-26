@@ -11,7 +11,7 @@ var urls=['http://www.clickhole.com/',
 // Function to get popups of any urls
 function popitup(url) {
 	var anewwindow=window.open(url,'name','height=200,width=150');
-	if (window.focus) {anewwindow.focus()} {anewwindow.focus()}
+	if (window.focus) {anewwindow.focus()}
 	return false;
 }
 
