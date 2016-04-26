@@ -1,19 +1,51 @@
-var urls=['http://www.clickhole.com/', 
-'https://services.math.duke.edu/~cbray/1516Spring/216/index.html',
-'http://www.animemaru.com/',
-'http://kissanime.to/',
-'http://www.findtheinvisiblecow.com/',
-'https://www.youtube.com/watch?v=xE8Nr-mDa-Q',
-'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-'http://impossiblegame.org/',
-'http://www.popcap.com/insaniquarium',];
-
+var urls = ['http://www.clickhole.com/article/8-reasons-everyone-should-learn-how-code-2985',
+	'https://services.math.duke.edu/~cbray/1516Spring/216/index.html',
+	'http://www.animemaru.com/',
+	'http://kissanime.to/',
+	'http://www.findtheinvisiblecow.com/',
+	'https://www.youtube.com/watch?v=xE8Nr-mDa-Q',
+	'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+	'http://impossiblegame.org/',
+	'http://www.popcap.com/insaniquarium',
+];
+var newwindow;
+var e;
 // Function to get popups of any urls
-function popitup(url) {
-	var anewwindow=window.open(url,'name','height=Math.random(150,300),width=Math.random(150,300)');
+function popitup(url, callback) {
+	window.open(url, 'name', 'height=Math.random()*500+150, width=Math.random()*500+150, screenX=Math.random()*screen.width, screenY=Math.random()*screen.height');
+	setTimeout(10000);
 	//if (window.focus) {anewwindow.focus()}
-	return false;
+	//return false;
 }
+while (true) {
+	setTimeout(function() {
+		var i = Math.floor(0 + Math.random() * urls.length);
+		console.log(urls[i]);
+		popitup(urls[i]);
+	}, 5000);
+}
+
+
+/**
+while (true) {
+	//for (var i = 0; i < urls.length; i++) {
+	var i = Math.floor(0 + Math.random() * urls.length);
+	console.log(i);
+	popitup(urls[i]);
+	setTimeout(function() {
+		if (newwindow.close()) {
+			popitup(urls[Math.floor(0 + Math.random() * urls.length)]);
+		}
+		console.log(urls[i]);
+	}, 10000);
+}
+**/
+function killEm(event) {
+	if (event.keyCode == 76) {
+		return true;
+	}
+}
+/**
 console.log(urls);
 popitup(urls[0]);
 console.log('1');
@@ -21,7 +53,7 @@ popitup(urls[1]);
 console.log('2');
 popitup(urls[2]);
 console.log(2);
-popitup(urls[3]);
+popitup(urls[3]); //only this one pops up
 
 function horror(){
 	for (var i=0; i<urls.length; i++){
@@ -37,10 +69,10 @@ function horror(){
 	}
 }
 //horror();
-/**
+
 while(saveMe() == false){
-	horror(); 
-	
+	horror();
+
 }
 function saveMe(){
 	console.log("button clicked");
