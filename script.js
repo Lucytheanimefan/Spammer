@@ -27,7 +27,8 @@ function horror(){
 	}
 }
 
-function saveMe(){
-	var saveMe = 
+horror(); 
 
+function saveMe(){
+	return true;
 }
