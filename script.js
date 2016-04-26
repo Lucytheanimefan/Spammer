@@ -3,7 +3,7 @@ var count=0;
 setInterval(function() {
 	var r = confirm("Press a button");
 	if (r == true) {
-	    x = "You pressed OK!";
+	    var x = "You pressed OK!";
 	} else {
 	    x = "You pressed Cancel!";
 	    count++;
@@ -11,9 +11,9 @@ setInterval(function() {
 	$('.count').html(count);
 }, 5000);
 
-
+/**
 setInterval( function(){
-	newWindow=window.open('popup.html', 'name', 'height=200, width=150');
+	var newWindow=window.open('popup.html', 'name', 'height=200, width=150');
 	if(window.focus){
 		newWindow.focus()
 	}
@@ -23,6 +23,13 @@ setInterval( function(){
 	} 
 	$('.count').html(count);
 }, 1000);
+**/
 
+// Function to get popups of any urls
+function popitup(url) {
+	var anewwindow=window.open(url,'name','height=200,width=150');
+	if (window.focus) {anewwindow.focus()}
+	return false;
+}
 
-//$("picksomething").datepicker();
+popitup('https://www.facebook.com/');
