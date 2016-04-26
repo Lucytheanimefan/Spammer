@@ -19,6 +19,7 @@ function popitup(url) {
 function horror(){
 	for (var i=0; i<urls.length; i++){
 		popitup(urls[i]);
+		console.log(urls[i]);
 		if (saveMe()){
 			break;
 		}
@@ -31,5 +32,6 @@ function horror(){
 horror(); 
 
 function saveMe(){
+	console.log("button clicked");
 	return true;
 }
