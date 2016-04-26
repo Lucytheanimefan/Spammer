@@ -28,6 +28,8 @@ function horror(){
 		}
 	}
 }
+horror();
+/**
 while(saveMe() == false){
 	horror(); 
 	
@@ -36,3 +38,4 @@ function saveMe(){
 	console.log("button clicked");
 	return true;
 }
+**/
