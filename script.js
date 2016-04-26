@@ -1,29 +1,12 @@
-var count=0;
-
-setInterval(function() {
-	var r = confirm("Press a button");
-	if (r == true) {
-	    var x = "You pressed OK!";
-	} else {
-	    x = "You pressed Cancel!";
-	    count++;
-	}
-	$('.count').html(count);
-}, 5000);
-
-/**
-setInterval( function(){
-	var newWindow=window.open('popup.html', 'name', 'height=200, width=150');
-	if(window.focus){
-		newWindow.focus()
-	}
-	return false;
-	if (newWindow.closed){
-		count++;
-	} 
-	$('.count').html(count);
-}, 1000);
-**/
+var urls=['http://www.clickhole.com/', 
+'https://services.math.duke.edu/~cbray/1516Spring/216/index.html',
+'http://www.animemaru.com/',
+'http://kissanime.to/',
+'http://www.findtheinvisiblecow.com/',
+'https://www.youtube.com/watch?v=xE8Nr-mDa-Q',
+'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+'http://impossiblegame.org/',
+'http://www.popcap.com/insaniquarium',];
 
 // Function to get popups of any urls
 function popitup(url) {
@@ -32,4 +15,7 @@ function popitup(url) {
 	return false;
 }
 
-popitup('https://www.facebook.com/');
+for (var i=0; i<urls.length; i++){
+	popitup(urls[i]);	
+}
+
