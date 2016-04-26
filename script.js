@@ -12,8 +12,9 @@ var urls=['http://www.clickhole.com/',
 function popitup(url) {
 	var anewwindow=window.open(url,'name','height=200,width=150');
 	if (window.focus) {anewwindow.focus()}
-	return false;
+	//return false;
 }
+
 
 function horror(){
 	for (var i=0; i<urls.length; i++){
