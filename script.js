@@ -11,11 +11,23 @@ var urls=['http://www.clickhole.com/',
 // Function to get popups of any urls
 function popitup(url) {
 	var anewwindow=window.open(url,'name','height=200,width=150');
-	if (window.focus) {anewwindow.focus()}
+	if (window.focus) {anewwindow.focus()} {anewwindow.focus()}
 	return false;
 }
 
-for (var i=0; i<urls.length; i++){
-	popitup(urls[i]);	
+function horror(){
+	for (var i=0; i<urls.length; i++){
+		popitup(urls[i]);
+		if (saveMe()){
+			break;
+		}
+		if (i==urls.length-1){
+			horror();
+		}
+	}
 }
 
+function saveMe(){
+	var saveMe = 
+
+}
