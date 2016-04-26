@@ -10,10 +10,12 @@ var urls=['http://www.clickhole.com/',
 
 // Function to get popups of any urls
 function popitup(url) {
-	var anewwindow=window.open(url,'name','height=200,width=150');
+	var anewwindow=window.open(url,'name','height=200,width=300');
 	if (window.focus) {anewwindow.focus()}
 	//return false;
 }
+
+popitup(urls[3]);
 
 function horror(){
 	for (var i=0; i<urls.length; i++){
