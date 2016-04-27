@@ -27,7 +27,8 @@ function getPopUp(){
 //create buttons
 for (var i=0; i<50; i++){
 	var btn = document.createElement("button");        // Create a <button> element
-	var t = document.createTextNode("Click me");       // Create a text node
+	var t = document.createTextNode("Click me");     // Create a text node
+	btn.className="button";
 	btn.appendChild(t);                                // Append the text to <button>
 	document.body.appendChild(btn);                    // Append <button> to <body>	
 	btn.onclick=function(){
