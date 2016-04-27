@@ -5,7 +5,7 @@ h1 {
 }
 
 .button {
-   var randomColor=Math.floor(Math.random()*16777215).toString(16);
+  
    border: 2px solid randomColor;
    //#0a3c59;
    background: randomColor;
