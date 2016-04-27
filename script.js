@@ -24,13 +24,23 @@ function getPopUp(){
 		popitup(urls[i]);
 }
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 //create buttons
 for (var i=0; i<55; i++){
 	var btn = document.createElement("button");        // Create a <button> element
 	var t = document.createTextNode("Click ME!");     // Create a text node
 	btn.className="button";
 	btn.appendChild(t);                                // Append the text to <button>
-	document.body.appendChild(btn);                    // Append <button> to <body>	
+	document.body.appendChild(btn);
+	btn.style.background=getRandomColor();// Append <button> to <body>	
 	btn.onclick=function(){
 		getPopUp();
 	}
