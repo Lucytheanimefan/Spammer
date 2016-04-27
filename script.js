@@ -17,13 +17,6 @@ function popitup(url, callback) {
 	//return false;
 }
 
-/**
-	setTimeout(function() {
-		var i = Math.floor(0 + Math.random() * urls.length);
-		console.log(urls[i]);
-		popitup(urls[i]);
-	}, 5000);
-	**/
 
 function getPopUp(){
 	var i = Math.floor(0 + Math.random() * urls.length);
@@ -31,56 +24,10 @@ function getPopUp(){
 		popitup(urls[i]);
 }
 
-/**
-while (true) {
-	//for (var i = 0; i < urls.length; i++) {
-	var i = Math.floor(0 + Math.random() * urls.length);
-	console.log(i);
-	popitup(urls[i]);
-	setTimeout(function() {
-		if (newwindow.close()) {
-			popitup(urls[Math.floor(0 + Math.random() * urls.length)]);
-		}
-		console.log(urls[i]);
-	}, 10000);
+//create buttons
+for (var i=0; i<10; i++){
+	var btn = document.createElement("button"+i.toString());        // Create a <button> element
+	var t = document.createTextNode("Click me");       // Create a text node
+	btn.appendChild(t);                                // Append the text to <button>
+	document.body.appendChild(btn);                    // Append <button> to <body>	
 }
-**/
-function killEm(event) {
-	if (event.keyCode == 76) {
-		return true;
-	}
-}
-/**
-console.log(urls);
-popitup(urls[0]);
-console.log('1');
-popitup(urls[1]);
-console.log('2');
-popitup(urls[2]);
-console.log(2);
-popitup(urls[3]); //only this one pops up
-
-function horror(){
-	for (var i=0; i<urls.length; i++){
-		popitup(urls[i]);
-		console.log(urls[i]);
-		//if (click){
-		//	break;
-		//}
-		window.setTimeout(10000);
-		if (i==urls.length-1){
-			horror();
-		}
-	}
-}
-//horror();
-
-while(saveMe() == false){
-	horror();
-
-}
-function saveMe(){
-	console.log("button clicked");
-	return true;
-}
-**/
