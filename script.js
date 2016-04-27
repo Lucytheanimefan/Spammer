@@ -8,6 +8,7 @@ var urls = ['http://www.clickhole.com/article/8-reasons-everyone-should-learn-ho
 	'http://impossiblegame.org/',
 	'http://www.popcap.com/insaniquarium',
 	'http://dukeenrage.tumblr.com/',
+	'https://math.duke.edu/sites/math.duke.edu/files/styles/medium/public/externals/4812f1aed0a4e8e1732312c862ef55e0.jpg?itok=VB7GgOR1'
 ];
 var newwindow;
 var e;
