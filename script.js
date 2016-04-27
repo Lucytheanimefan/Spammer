@@ -30,4 +30,9 @@ for (var i=0; i<10; i++){
 	var t = document.createTextNode("Click me");       // Create a text node
 	btn.appendChild(t);                                // Append the text to <button>
 	document.body.appendChild(btn);                    // Append <button> to <body>	
+	btn.onclick=function(){
+		getPopUp();
+	}
 }
+
+

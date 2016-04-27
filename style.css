@@ -1,4 +1,5 @@
 .button {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
    border: 2px solid #0a3c59;
    background: #3e779d;
    background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
