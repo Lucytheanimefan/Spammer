@@ -11,7 +11,7 @@ h1 {
   
    border: 2px solid randomColor;
    background: randomColor;
-   opacity:.4;
+   opacity:.85;
    background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
    background: -webkit-linear-gradient(top, #65a9d7, #3e779d);
    background: -moz-linear-gradient(top, #65a9d7, #3e779d);
