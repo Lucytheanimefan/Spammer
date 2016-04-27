@@ -10,8 +10,7 @@ var urls = ['http://www.clickhole.com/article/8-reasons-everyone-should-learn-ho
 	'http://dukeenrage.tumblr.com/',
 	'https://math.duke.edu/sites/math.duke.edu/files/styles/medium/public/externals/4812f1aed0a4e8e1732312c862ef55e0.jpg?itok=VB7GgOR1'
 ];
-var newwindow;
-var e;
+
 // Function to get popups of any urls
 function popitup(url, callback) {
 	window.open(url, 'name', 'height=Math.random()*500+150, width=Math.random()*500+150, screenX=Math.random()*screen.width, screenY=Math.random()*screen.height');
@@ -28,7 +27,7 @@ function getPopUp(){
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
-    var color = '#';
+    var color = '#64';
     for (var i = 0; i < 6; i++ ) {
         color += letters[Math.floor(Math.random() * 16)];
     }
